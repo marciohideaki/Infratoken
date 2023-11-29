@@ -1,0 +1,32 @@
+{
+  "name": "@marciohideaki/infratoken-service",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marciohideaki/InfratokenPOC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marciohideaki/InfratokenPOC/issues"
+  },
+  "homepage": "https://github.com/marciohideaki/InfratokenPOC#readme",
+  "dependencies": {
+    "@godaddy/terminus": "^4.12.1",
+    "chai": "^4.3.10",
+    "express": "^4.17.1",
+    "jest": "^29.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^5.10.3",
+    "save-dev": "^0.0.1-security",
+    "terminus": "^1.1.0",
+    "uuid": "^8.3.0"
+  }
+}
