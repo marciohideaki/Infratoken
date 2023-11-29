@@ -14,29 +14,29 @@ spec:
       labels:
         app: infratoken-service
     spec:
+      name: infratoken-service
       containers:
-        - env:
-            - httpGet:
-                failureThreshold: 3
-                initialDelaySeconds: 10
-                path: /healthcheck
-                periodSeconds: 10
-                port: 3000
-                successThreshold: 1
-                timeoutSeconds: 5
-              livenessProbe: null
-              name: NAME
-              readinessProbe:
-                failureThreshold: 3
-                httpGet: null
-                initialDelaySeconds: 10
-                path: /healthcheck
-                periodSeconds: 10
-                port: 3000
-                successThreshold: 1
-              value: Infratoken
-          image: 'ghcr.io/marciohideaki/infratokenpoc:latest'
-          name: infratoken-service
+      - name: infratoken-service
+        value: Infratoken
+        image: 'ghcr.io/marciohideaki/infratokenpoc:latest'
+      env:
+        - httpGet:
+          failureThreshold: 3
+          initialDelaySeconds: 10
+          path: /healthcheck
+          periodSeconds: 10
+          port: 3000
+          successThreshold: 1
+          timeoutSeconds: 5
+          livenessProbe: null
+          readinessProbe:
+            failureThreshold: 3
+            httpGet: null
+            initialDelaySeconds: 10
+            path: /healthcheck
+            periodSeconds: 10
+            port: 3000
+            successThreshold: 1
           ports:
             - containerPort: 3000
           resources:
