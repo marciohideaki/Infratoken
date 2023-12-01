@@ -4,7 +4,7 @@ metadata:
   labels:
     argocd.argoproj.io/instance: infratoken-service
   name: infratoken-service
-  namespace: develop-infratoken
+  namespace: infratoken
 spec:
   replicas: 2
   selector:
@@ -17,7 +17,7 @@ spec:
         app: infratoken-service
     spec:
       containers:
-      - name: infratoken-service
+      - name: infratoken-servicedeve
         image: 'ghcr.io/marciohideaki/infratokenpoc:latest'
         ports:
           - containerPort: 3000
