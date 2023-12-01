@@ -3,8 +3,10 @@ kind: Service
 metadata:
   name: infratoken-service
 spec:
-  type: NodePort
-  ports:
-  - port: 3000
   selector:
     app: infratoken-service
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000  
