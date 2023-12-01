@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: infratoken-service
+  namespace: infratoken
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/marciohideaki/Infratoken
+    path: app
+    targetRevision: main
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: production
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
