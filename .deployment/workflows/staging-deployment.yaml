@@ -4,7 +4,7 @@ metadata:
   labels:
     argocd.argoproj.io/instance: infratoken-service
   name: infratoken-service
-  namespace: infratoken
+  namespace: staging-infratoken
 spec:
   replicas: 2
   selector:
