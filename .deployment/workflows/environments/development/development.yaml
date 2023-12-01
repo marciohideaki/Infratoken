@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: https://github.com/marciohideaki/Infratoken
     path: app
-    targetRevision: main
+    targetRevision: develop
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: development
+    namespace: infratoken
   syncPolicy:
     automated:
       prune: true
